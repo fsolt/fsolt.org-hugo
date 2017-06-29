@@ -1,7 +1,6 @@
 ---
-layout: default
+layout: page
 title: Home
-output: html_document
 ---
 
 ## About
