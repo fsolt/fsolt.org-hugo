@@ -7,7 +7,6 @@
     {{ if intersect .Params.tags (slice "sfaq_howto") | len | lt 0 }}
 
         <h3><a href="{{ .URL }}">{{ .Title }}</a></h3>
-        <h5>{{ .Date.Format "Monday, 2 January 2006" }}</h5>
       <div class="entry">
         {{ .Content}}
       </div>
@@ -21,7 +20,6 @@
     {{ if intersect .Params.tags (slice "sfaq_data") | len | lt 0 }}
 
         <h3><a href="{{ .URL }}">{{ .Title }}</a></h3>
-        <h5>{{ .Date.Format "Monday, 2 January 2006" }}</h5>
       <div class="entry">
         {{ .Content}}
       </div>
