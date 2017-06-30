@@ -3,6 +3,7 @@ layout: post
 title:  "How can I use the SWIID data to make my own graphs? Or to get the data in the old mean-plus-standard-error format?"
 date:   2015-10-05 17:14:01
 tags: [ "sfaq_howto" ]
+slug: mean-and-std-err
 ---
 
 Since Version 5.0, the SWIID is distributed only pre-formatted for use with the tools for analyzing multiply-imputed data in Stata or R. This is meant to "set the default" in a way that encourages researchers to take into account the uncertainty in the SWIID estimates; this uncertainty is considerable in many developing countries. This decision does mean, however, that one will have to take the extra step of summarizing the multiple imputations when they aren’t needed, e.g., for graphing, or when doing analyses that the multiple-imputation tools can’t handle (though in such circumstances, one should limit one’s sample to those observations with relatively small standard errors; see [Solt 2009](../papers/Solt2009), 238).

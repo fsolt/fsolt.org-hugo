@@ -3,6 +3,7 @@ layout: post
 title: "Notes for Those New to Writing Peer Reviews"
 date: 2017-04-14 14:27:31
 tags: [ "note" ]
+slug: reviewing-workshop
 ---
 
 Today we had a workshop for our graduate students on writing peer reviews.  Here are the notes I spoke from:

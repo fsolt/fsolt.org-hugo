@@ -3,6 +3,7 @@ layout: post
 title:  "SWIID Version 3.0 is now available!"
 date:   2010-07-11 16:46:01
 tags: [ "update", "swiid" ]
+slug: swiid-version-3_0
 ---
 
 Version 3.0 of the SWIID is now available, with expanded coverage and improved estimates. 

@@ -3,6 +3,7 @@ layout: post
 title:  "What about Russia and the rest of the former Soviet Union? Yugoslavia? Czechoslovakia? Pakistan? Sudan? Ethiopia? Why are there estimates for successor states before they actually existed?"
 date:   2015-10-05 11:18:01
 tags: [ "sfaq_data" ]
+slug: partition-and-successors
 ---
 
 For countries that have undergone partition, the SWIID estimates for a given year include all of the origin country's then-current territories.  This means that for dates before partition, all of the once united territory is included: estimates for Sudan before 2011, for example, include present-day South Sudan.
