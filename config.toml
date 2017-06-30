@@ -1,5 +1,5 @@
 baseurl = "http://fsolt.org"
-relativeurls = true
+relativeurls = false
 languageCode = "en-us"
 title = "Frederick Solt"
 theme = "hugo-lithium-theme"
@@ -14,7 +14,7 @@ enableEmoji = true
 
 [[menu.main]]
     name = "Home"
-    url = "http://fsolt.org"
+    url = "/"
     weight = 1
 [[menu.main]]
     name = "The SWIID"
