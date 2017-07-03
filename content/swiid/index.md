@@ -21,4 +21,4 @@ Powered by [RStudio](http://shiny.rstudio.com).
 
 Please cite the SWIID as follows:
 
-Solt, Frederick.  2016. "The Standardized World Income Inequality Database."  _Social Science Quarterly_ 97.  SWIID Version 5.1, July 2016.<br />[Download BibTeX citation](/papers/Solt2016/Solt2016.bib).
+Solt, Frederick.  2016. "The Standardized World Income Inequality Database."  _Social Science Quarterly_ 97.  SWIID Version 5.1, July 2016.<br />[Download BibTeX citation](/papers/solt2016/solt2016.bib).
