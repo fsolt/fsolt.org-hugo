@@ -10,7 +10,7 @@ Cross-national research on the causes and consequences of income inequality has 
 
 [Solt, Frederick. 2016. "The Standardized World Income Inequality Database." _Social Science Quarterly_ 97(5):1267-1281.](/papers/solt2016)  (Pre-publication copy [available here](/papers/solt2016_pre)).
 
-There are two ways of using the SWIID.  To directly compare up to four countries in estimated levels and trends of (a) inequality in net (post-tax, post-transfer) income, (b) inequality in market (pre-tax, pre-transfer) income, (c) absolute redistribution (market-income inequality minus net-income inequality), or (d) relative redistribution (market-income inequality minus net-income inequality, divided by market-income inequality), or to compare several of these measures in a single country, use the SWIID web app below.  To use the SWIID in statistical analyses, datasets formatted for use in Stata and R are available for download.
+There are two ways of using the SWIID.  To directly compare up to four countries in estimated levels and trends of (a) inequality in net (post-tax, post-transfer) income, (b) inequality in market (pre-tax, pre-transfer) income, &#40;c) absolute redistribution (market-income inequality minus net-income inequality), or (d) relative redistribution (market-income inequality minus net-income inequality, divided by market-income inequality), or to compare several of these measures in a single country, use the SWIID web app below.  To use the SWIID in statistical analyses, datasets formatted for use in Stata and R are available for download.
 
 <a class="button" href="swiid_downloads.html">Download SWIID Version 5.1</a>
 <a class="button" href="swiid_faq.html">Frequently Asked Questions</a>
