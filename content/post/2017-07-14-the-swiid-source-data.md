@@ -1,7 +1,7 @@
 ---
 title: The SWIID Source Data
 author: Frederick Solt
-date: '2017-07-13'
+date: '2017-07-14'
 tags:
   - note
   - r
