@@ -1,5 +1,5 @@
 baseurl = "http://fsolt.org"
-relativeurls = false
+relativeurls = true
 languageCode = "en-us"
 title = "Frederick Solt"
 theme = "hugo-lithium-theme"
