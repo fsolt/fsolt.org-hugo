@@ -9,7 +9,6 @@ echo -e "\033[0;32mDeploying updates to GitHub...\033[0m"
 # RScript -e 'blogdown::build_site()'
 RScript 'R/use_knitr.R'
 
-
 # Go To Public folder
 cd public
 # Add changes to git.
