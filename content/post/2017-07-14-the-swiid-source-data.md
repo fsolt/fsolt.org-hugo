@@ -9,10 +9,12 @@ tags:
 slug: the-swiid-source-data
 bibliography: ~/Library/texmf/bibtex/bib/FSLibrary.bib
 csl: /Users/fredsolt/Library/texmf/bibtex/csl/american-political-science-association2.csl
-fig_height: 4 
+fig_height: 3 
 ---
 
 
+
+TEST
 
 I have been producing the Standardized World Income Inequality Database for nearly a decade. Since 2008, the SWIID has provided estimates of the Gini index of income inequality^[I think the clearest explanation of the Gini index is that it is half the average difference in income between all pairs of units---say, households---as a percentage of the mean income across households.  Okay, I said "clearest," not necessarily "clear."  Anyway, it has a theoretical range of 0 (all households have the same income) to 1 (one household has all the income and the rest have none), but Ginis below 20 or above 60 are rare in the real world.  There are good reasons to prefer other measures of inequality, and there are many options, but the Gini is by far the most widely available.] for as many countries and years as possible and--given the primary goal of maximizing spatial and temporal coverage--these estimates are as comparable as the available data allow.  The dataset has been used widely by academics, journalists, and policymakers.  It's been successful way beyond all my hopes.^[At the time, those hopes were admittedly concerned mostly with getting [#Reviewer2](https://twitter.com/search?q=%23reviewer2&src=typd) off my back so I could publish a [series](http://fsolt.org/papers/solt2011) [of](http://fsolt.org/papers/solthabelgrant2011) [manuscripts](http://fsolt.org/papers/solt2012) I had on how the context of inequality is related to people's political attitudes.] I've been [adding to it, revising it, improving on it](http://fsolt.org/swiid/swiid_downloads.html) pretty much the entire time since its launch.  Now, [with the support of the NSF](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1533746), I'm scrapping all of that work and starting fresh.  From scratch.  
 
