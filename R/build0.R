@@ -2,6 +2,8 @@ options(stringsAsFactors = FALSE)
 cargs = commandArgs(TRUE)
 local = cargs[1] == 'TRUE'
 
+knitr::knit(a[1], a[2], quiet = TRUE, encoding = 'UTF-8', envir = .GlobalEnv)
+
 build_one = function(io, external = FALSE)  {
     if (!file.exists(io[1])) {
         if (Sys.getenv('USER') == 'fredsolt') stop('File ', io[1], ' does not exist')

@@ -6,7 +6,8 @@ echo -e "\033[0;32mDeploying updates to GitHub...\033[0m"
 # Build the project.
 # hugo -t hugo-icarus-theme # if using a theme, replace by `hugo -t <yourtheme>`
 
-RScript -e 'blogdown::build_site(method = "custom")'
+# RScript -e 'blogdown::build_site()'
+RScript 'R/use_knitr.R'
 
 
 # Go To Public folder
@@ -20,9 +21,9 @@ if [ $# -eq 1 ]
          then msg="$1"
      fi
      git commit -m "$msg"
-     
+
      # Push source and build repos.
      git push origin master
-     
+
      # Come Back
      cd ..
