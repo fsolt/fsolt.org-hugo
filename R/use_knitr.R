@@ -19,17 +19,21 @@ build_site1 <- function (local = FALSE, method = c("html", "html_encoded", "cust
 
 build_rmds1 <- function (files, config, local, raw = FALSE) {
     if (length(files) == 0) 
-        return(hugo_build(local, config))
+        return(blogdown:::hugo_build(local, config))
     lib1 = blogdown:::by_products(files, c("_files", "_cache", if (!raw) ".html"))
     lib2 = gsub("^content", "blogdown", lib1)
     if (raw) {
         i = grep("_files$", lib2)
         lib2[i] = gsub("^blogdown", "static", lib2[i])
     }
-    for (i in seq_along(lib2)) if (blogdown:::file_exists(lib2[i])) {
-        file.rename(lib2[i], lib1[i])
+    for (i in seq_along(lib2)) {
+        if (blogdown:::file_exists(lib2[i])) {
+            file.rename(lib2[i], lib1[i])
+        } else {
+            blogdown:::dir_copy(lib2[i], lib1[i])
+        }
     }
-    else blogdown:::dir_copy(lib2[i], lib1[i])
+        
     root = getwd()
     base = blogdown:::site_base_dir()
     shared_yml = file.path(root, "_output.yml")
@@ -48,8 +52,15 @@ build_rmds1 <- function (files, config, local, raw = FALSE) {
         }
         knitr::knit(f, quiet = TRUE, encoding = 'UTF-8', envir = .GlobalEnv)
         x = blogdown:::readUTF8(html)
-        x = blogdown:::encode_paths(x, blogdown:::by_products(f, "_files"), d, raw, 
+        x = blogdown:::encode_paths(x, blogdown:::by_products(f, "_files"), d, raw,  
                          root, base)
+        x1 = gsub(pattern = file.path(blogdown:::by_products(f, "_files"), "figure-html"),
+            replacement = paste(config$baseurl, gsub("content/", "", d), sep = .Platform$file.sep),
+            x)
+        x = blogdown:::encode_paths(x, "figure", d, raw, root, base)    
+        blogdown:::dirs_copy(file.path("figure"), 
+                             file.path(paste(rep("..", length(strsplit(d, "/")[[1]])), collapse = .Platform$file.sep),
+                                       "content", config$blogdir, blogdown:::by_products(f, "_files"), "figure-html"))
         if (getOption("blogdown.widgetsID", TRUE)) 
             x = blogdown:::clean_widget_html(x)
         if (raw) 

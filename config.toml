@@ -1,5 +1,5 @@
 baseurl = "http://fsolt.org"
-relativeurls = true
+relativeurls = false
 languageCode = "en-us"
 title = "Frederick Solt"
 theme = "hugo-lithium-theme"
@@ -8,6 +8,7 @@ disqusShortname = ""
 ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
 uglyURLS = true
 enableEmoji = true
+blogdir = "blog"
 
 [permalinks]
     post = "/blog/:year/:month/:day/:slug/"
