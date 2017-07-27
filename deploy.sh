@@ -7,7 +7,12 @@ echo -e "\033[0;32mDeploying updates to GitHub...\033[0m"
 # hugo -t hugo-icarus-theme # if using a theme, replace by `hugo -t <yourtheme>`
 
 # RScript -e 'blogdown::build_site()'
-RScript 'R/use_knitr.R'
+# RScript 'R/use_knitr.R'
+
+# Lame workaround:
+# 1. blogdown::build_site()
+# 2. knit .Rmd's in RStudio
+# 3. rename resulting .html to exclude date and move to public/blog, replacing .html in dated subfolder
 
 # Go To Public folder
 cd public

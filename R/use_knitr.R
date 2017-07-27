@@ -17,7 +17,7 @@ build_site1 <- function (local = FALSE, method = c("html", "html_encoded", "cust
     invisible()
 }
 
-build_rmds1 <- function (files, config, local, raw = FALSE) {
+build_rmds1 <- function (files, config, local, raw = TRUE) {
     if (length(files) == 0) 
         return(blogdown:::hugo_build(local, config))
     lib1 = blogdown:::by_products(files, c("_files", "_cache", if (!raw) ".html"))
@@ -50,21 +50,25 @@ build_rmds1 <- function (files, config, local, raw = FALSE) {
             file.copy(shared_yml, "./")
             copied_yaml = c(copied_yaml, normalizePath("_output.yml"))
         }
-        knitr::knit(f, quiet = TRUE, encoding = 'UTF-8', envir = .GlobalEnv)
+        knitr::knit(f, output = html, quiet = TRUE, encoding = 'UTF-8', envir = .GlobalEnv)
         x = blogdown:::readUTF8(html)
         x = blogdown:::encode_paths(x, blogdown:::by_products(f, "_files"), d, raw,  
                          root, base)
-        x1 = gsub(pattern = file.path(blogdown:::by_products(f, "_files"), "figure-html"),
-            replacement = paste(config$baseurl, gsub("content/", "", d), sep = .Platform$file.sep),
-            x)
-        x = blogdown:::encode_paths(x, "figure", d, raw, root, base)    
-        blogdown:::dirs_copy(file.path("figure"), 
-                             file.path(paste(rep("..", length(strsplit(d, "/")[[1]])), collapse = .Platform$file.sep),
-                                       "content", config$blogdir, blogdown:::by_products(f, "_files"), "figure-html"))
+        # x = blogdown:::encode_paths(x, "figure", d, raw, root, base)    
+        # blogdown:::dirs_copy(file.path("figure"), 
+        #                      file.path(paste(rep("..", length(strsplit(d, "/")[[1]])), collapse = .Platform$file.sep),
+        #                                "content", config$blogdir, blogdown:::by_products(f, "_files"), "figure-html"))
         if (getOption("blogdown.widgetsID", TRUE)) 
             x = blogdown:::clean_widget_html(x)
         if (raw) 
             x = blogdown:::split_html_tokens(x, FALSE)$body
+        x = gsub(pattern = "\\(figure/",
+                 replacement = paste0("(",
+                                      paste(config$baseurl, gsub("content/", "", d), sep = .Platform$file.sep),
+                                      .Platform$file.sep,
+                                      "figure",
+                                      .Platform$file.sep),
+                 x)
         blogdown:::prepend_yaml(f, html, x)
     })
     blogdown:::dirs_copy(lib1, lib2)
@@ -76,6 +80,21 @@ build_rmds1 <- function (files, config, local, raw = FALSE) {
         file.rename(lib1[i], lib2[i])
     }
     unlink(lib1, recursive = TRUE)
+    
+    for (f in files) {
+        html <- gsub("content/post/(\\d{4})-(\\d{2})-(\\d{2})-(.*)\\.[Rr]md",
+                   paste("public", config$blogdir, "\\1", "\\2", "\\3", "\\4.html",  sep = .Platform$file.sep),
+                   f)
+        x = blogdown:::readUTF8(html)
+        x = gsub(pattern = "\\(figure/",
+                 replacement = paste0("(",
+                                      paste(config$baseurl, gsub("content/", "", d), sep = .Platform$file.sep),
+                                      .Platform$file.sep,
+                                      "figure",
+                                      .Platform$file.sep),
+                 x)
+        blogdown:::writeUTF8(x, html)
+    }
 }
 
 build_site1()
