@@ -1,28 +1,21 @@
 ---
 layout: post
-title:  "How can I use the SWIID data to make my own graphs? Or to get the data in the old mean-plus-standard-error format?"
+title:  "How can I use the SWIID data to make my own graphs?"
 date:   2015-10-05 17:14:01
 tags: [ "sfaq_howto" ]
 slug: mean-and-std-err
 ---
 
-Since Version 5.0, the SWIID is distributed only pre-formatted for use with the tools for analyzing multiply-imputed data in Stata or R. This is meant to "set the default" in a way that encourages researchers to take into account the uncertainty in the SWIID estimates; this uncertainty is considerable in many developing countries. This decision does mean, however, that one will have to take the extra step of summarizing the multiple imputations when they aren’t needed, e.g., for graphing, or when doing analyses that the multiple-imputation tools can’t handle (though in such circumstances, one should limit one’s sample to those observations with relatively small standard errors; see [Solt 2009](../papers/Solt2009), 238).
+The [SWIID download](https://dataverse.harvard.edu/dataset.xhtml?persistentId=hdl:1902.1/11992) contains files pre-formatted for use with the tools for analyzing multiply-imputed data and other data measured with uncertainty in Stata (`swiid6_0.dta`) or R (`swiid6_0`). This is meant to "set the default" in a way that encourages researchers to take into account the uncertainty in the SWIID estimates.  This uncertainty is considerable in many developing countries, and the tools available in both software packages can now handle pretty much any analysis one may desire (for details, read the documents `R_swiid.pdf` and `stata_swiid.pdf` in the SWIID download). But this format does not lend itself to graphing.  For this purpose, use the `swiid6_0_summary.csv` file, which presents the SWIID estimates in mean-plus-standard-error summary format.
 
 In Stata:
 
 ```
-use SWIIDv5_1.dta, clear
-// Summarize the dataset
-keep country year _*
-
-foreach v in gini_net gini_market rel_red abs_red {
-    egen `v' = rowmean(_*`v')
-    egen `v'_se = rowsd(_*`v')
-    gen `v'_95ub = `v' + 1.96*`v'_se
-    gen `v'_95lb = `v' - 1.96*`v'_se
-}
-drop _*
-sort country year
+ import delimited "swiid6_0_summary.csv", clear
+ 
+// Calculate the bounds of the 95% uncertainty intervals
+gen gini_disp_95ub = gini_disp + 1.96*gini_disp_se
+gen gini_disp_95lb = gini_disp - 1.96*gini_disp_se
 
 // A silly example
 gen name_length = length(country)
@@ -37,23 +30,24 @@ twoway rspike gini_net_95ub gini_net_95lb name_length, lstyle(ci) || ///
 In R: 
 
 ```R
-library(dplyr)
-library(stringr)
-library(ggplot2)
+library(tidyverse)
 
 # Load the SWIID
-load("../SWIIDv5_1.RData")
+load("swiid6_0.rda")
 
-# Summarize the SWIID
-swiid_summary <- swiid %>% 
-    bind_rows() %>% 
-    group_by(country, year) %>% 
-    summarize_all(funs(mean, sd)) %>%
-    ungroup() %>% 
-    rename_(.dots=setNames(names(.), 
-                           str_replace(names(.), "_mean", ""))) %>% 
-    rename_(.dots=setNames(names(.), 
-                           str_replace(names(.), "_sd", "_se")))
+# Plot SWIID gini_disp estimates for the United States
+swiid_summary %>% 
+    filter(country == "United States") %>% 
+    ggplot(aes(x=year, y=gini_disp)) + 
+    geom_line() +
+    geom_ribbon(aes(ymin = gini_disp-1.96*gini_disp_se,
+                    ymax = gini_disp+1.96*gini_disp_se, 
+                    linetype=NA), alpha = .25) +
+    scale_x_continuous(breaks=seq(1960, 2015, 5)) +
+    theme_bw() + 
+    labs(x = "Year", 
+         y = "SWIID Gini Index, Disposable Income",
+         title = "Income Inequality in the United States")
 
 # Plot SWIID gini_net estimates for the United States
 swiid_summary %>% 
