@@ -24,7 +24,7 @@ I always start my reviews with a quick summary of the piece, but as reviewers, o
 
   + Are the coefficients and statistical significance interpreted correctly?  [Are the quantities of substantive interest, such as predicted probabilities, estimated and plotted?](http://www.jstor.org/stable/2669316)  With their associated uncertainty?
 
-  + Can any included tables be made into graphs?  Probably, so be specific about what you have in mind, cite to [Kastellec and Leoni's (2007) _Perspectives_ article](www.jstor.org/stable/20446574), and maybe even give the [`dotwhisker` package](https://cran.r-project.org/web/packages/dotwhisker/vignettes/dotwhisker-vignette.html) a shout-out if you think it'd help.
+  + Can any included tables be made into graphs?  Probably, so be specific about what you have in mind, cite to [Kastellec and Leoni's (2007) _Perspectives_ article](http://www.jstor.org/stable/20446574), and maybe even give the [`dotwhisker` package](https://cran.r-project.org/web/packages/dotwhisker/vignettes/dotwhisker-vignette.html) a shout-out if you think it'd help.
 
 4. Note what you're NOT evaluating: the results themselves.  Don't filter on statistical significance: we need to avoid contributing [to publication bias](http://www.jstor.org/stable/25791658) and the pressure way too many people apparently feel [to p-hack their way to publication](http://www.stat.columbia.edu/~gelman/research/unpublished/p_hacking.pdf).  And this should go without saying, but be sure to check your own presuppositions about what the results 'should' show at the door.
 
