@@ -1,7 +1,7 @@
 ---
 title: SWIID Version 6.1 is available!
 author: Frederick Solt
-slug: swiid-version-6_0
+slug: swiid-version-6_1
 date: '2017-10-27'
 tags:
   - note
@@ -44,7 +44,7 @@ ggplot(data=brics, aes(x=year, y=gini_disp, colour=country)) +
   geom_text(aes(1977, 56, label = "Brazil", colour="Brazil"), size=4.5) +
   geom_text(aes(1980, 46.5, label = "India", colour="India"), size=4.5) +
   geom_text(aes(1985, 37, label = "China", colour="China"), size=4.5) +
-  geom_text(aes(1992.2, 30, label = "Russia", colour="Russia"), size=4.5)
+  geom_text(aes(1992.2, 32.5, label = "Russia", colour="Russia"), size=4.5)
 ```
 
 For more details, you can check out the all the R and Stan code used to generate the estimates [in the SWIID GitHub repository](https://github.com/fsolt/swiid).  As always, I encourage users of the SWIID to [email me](mailto:frederick-solt@uiowa.edu) with their comments, questions, and suggestions.
