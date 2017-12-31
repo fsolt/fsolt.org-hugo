@@ -4,7 +4,7 @@
 echo -e "\033[0;32mDeploying updates to GitHub...\033[0m"
 
 # Build the project.
-# hugo -t hugo-icarus-theme # if using a theme, replace by `hugo -t <yourtheme>`
+hugo -t hugo-fs-theme # if using a theme, replace by `hugo -t <yourtheme>`
 
 RScript -e 'blogdown::build_site()'
 
