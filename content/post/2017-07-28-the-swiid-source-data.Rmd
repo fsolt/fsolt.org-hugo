@@ -7,7 +7,7 @@ tags:
   - r
   - swiid
 slug: the-swiid-source-data
-bibliography: ~/Library/texmf/bibtex/bib/FSLibrary.bib
+bibliography: /Users/fredsolt/Library/texmf/bibtex/bib/FSLibrary.bib
 csl: /Users/fredsolt/Library/texmf/bibtex/csl/american-political-science-association2.csl
 fig_height: 4 
 output:
@@ -114,7 +114,7 @@ swiid_source %>%
 
 The source data includes observations for Sweden and the United Kingdom in all but one of these years and for the United States in all but six.  Argentina---a country not included in the LIS---makes the top 12, with 41 country-year observations.  The median country has observations in just eleven different country-years.
 
-We can also get a sense of the available inequality data by turning the question around and asking about the coverage across countries over time.  There are observations for `r swiid_source %>% filter(year==2005) %>% count(country) %>% nrow()` countries in 2005.  Coverage is relatively good in the years from 2000 to 2014, at least 80 countries per year, before dropping to `r swiid_source %>% filter(year==2015) %>% count(country) %>% nrow()` countries for 2015 and just `r swiid_source %>% filter(year==2016) %>% count(country) %>% nrow()` for last year.  Country coverage is pretty thin each year through the 1960s and 1970s and still isn't all that great until the late 1980s.^[This is partly a result of my decision to insist on sources that are available online, but it's just as well: so little information is available about many of the so-excluded observations on that era that I find it hard to have much confidence in them.]
+We can also get a sense of the available inequality data by turning the question around and asking about coverage across countries over time.  There are observations for `r swiid_source %>% filter(year==2005) %>% count(country) %>% nrow()` countries in 2005.  Coverage is relatively good in the years from 2000 to 2014, at least 80 countries per year, before dropping to `r swiid_source %>% filter(year==2015) %>% count(country) %>% nrow()` countries for 2015 and just `r swiid_source %>% filter(year==2016) %>% count(country) %>% nrow()` for last year.  Country coverage is pretty thin each year through the 1960s and 1970s and still isn't all that great until the late 1980s.^[This is partly a result of my decision to insist on sources that are available online, but it's just as well: so little information is available about many of the so-excluded observations on that era that I find it hard to have much confidence in them.]
 
 ```{r countries_by_year, echo=FALSE}
 swiid_source %>%
