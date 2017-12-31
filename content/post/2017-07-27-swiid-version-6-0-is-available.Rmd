@@ -7,11 +7,11 @@ tags:
   - note
   - r
   - swiid
-bibliography: ~/Library/texmf/bibtex/bib/FSLibrary.bib
+bibliography: /Users/fredsolt/Library/texmf/bibtex/bib/FSLibrary.bib
 csl: /Users/fredsolt/Library/texmf/bibtex/csl/american-political-science-association2.csl
 fig_height: 4 
 output:
-    blogdown::html_page:
+    html_page:
         self_contained: true
 ---
 
