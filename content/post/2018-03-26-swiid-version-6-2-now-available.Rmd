@@ -11,7 +11,7 @@ bibliography: /Users/fredsolt/Library/texmf/bibtex/bib/FSLibrary.bib
 csl: /Users/fredsolt/Library/texmf/bibtex/csl/american-political-science-association2.csl
 fig_height: 4 
 output:
-    html_page:
+    html_document:
         self_contained: true
 ---
 
@@ -23,7 +23,7 @@ Version 6.2 of the SWIID is [now available](http://fsolt.org/swiid/swiid_downloa
 
 - calculates estimates of absolute and relative redistribution for one additional country, Latvia, for a total of sixty-seven---all of the countries for which there is source data available [on both the distribution of market income and the distribution of disposable income or consumption](http://fsolt.org/blog/2015/10/05/redistribution-observations.html).
 
-```{r, echo=FALSE, message=FALSE}
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
 library(tidyverse)
 load("../../../swiid/data/swiid6_2.rda")
 
@@ -39,10 +39,10 @@ ggplot(data=brics, aes(x=year, y=gini_disp, colour=country)) +
   labs(x = "Year", y = "SWIID Gini Index, Disposable Income") +
   geom_ribbon(aes(ymin = gini_disp-1.96*gini_disp_se, ymax = gini_disp+1.96*gini_disp_se, 
                   fill=country, linetype=NA), alpha = .25) +
-  geom_text(aes(1977, 56, label = "Brazil", colour="Brazil"), size=4.5) +
-  geom_text(aes(1980, 46.5, label = "India", colour="India"), size=4.5) +
-  geom_text(aes(1985, 37, label = "China", colour="China"), size=4.5) +
-  geom_text(aes(1992.2, 32.5, label = "Russia", colour="Russia"), size=4.5)
+  geom_text(aes(1977, 55.5, label = "Brazil", colour="Brazil"), size=4.5) +
+  geom_text(aes(1980, 46.3, label = "India", colour="India"), size=4.5) +
+  geom_text(aes(1991, 29, label = "China", colour="China"), size=4.5) +
+  geom_text(aes(1988, 39, label = "Russia", colour="Russia"), size=4.5)
 ```
 
 For more details, you can check out the all the R and Stan code used to generate the estimates [in the SWIID GitHub repository](https://github.com/fsolt/swiid).  As always, I encourage users of the SWIID to [email me](mailto:frederick-solt@uiowa.edu) with their comments, questions, and suggestions.
