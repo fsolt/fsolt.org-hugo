@@ -55,6 +55,7 @@ blogdir = "blog"
     email = "frederick-solt@uiowa.edu"
     twitter_username = "fredericksolt"
     github_username = "fsolt"
+    dataverse_username = "fsolt"
     gscholar_code = "PNwjYEAAAAAJ"
 
     # options for highlight.js (version, additional languages, and theme)
