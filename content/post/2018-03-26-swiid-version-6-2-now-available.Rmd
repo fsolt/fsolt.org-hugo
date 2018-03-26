@@ -2,12 +2,12 @@
 title: SWIID Version 6.2 is available!
 author: Frederick Solt
 slug: swiid-version-6_2
-date: '2018-03-24'
+date: '2018-03-26'
 tags:
   - note
   - r
   - swiid
-twitter_image: /img/swiid_v62.png
+twitter_image: img/swiid_v62.png
 bibliography: /Users/fredsolt/Library/texmf/bibtex/bib/FSLibrary.bib
 csl: /Users/fredsolt/Library/texmf/bibtex/csl/american-political-science-association2.csl
 fig_height: 4 
