@@ -11,7 +11,7 @@ title: Software
 Solt, Frederick, and Yue Hu. 2015. dotwhisker: Dot-and-Whisker Plots of Regression Results. The Comprehensive R Archive Network (CRAN). 
 
 [![CRAN version](http://www.r-pkg.org/badges/version/dotwhisker)](https://cran.r-project.org/web/packages/dotwhisker/index.html) ![](http://cranlogs.r-pkg.org/badges/grand-total/dotwhisker)
-![](http://cranlogs.r-pkg.org/badges/dotwhisker?color=orange)[![Travis-CI Build Status](https://travis-ci.org/fsolt/dotwhisker.svg?branch=master)](https://travis-ci.org/fsolt/dotwhisker)
+![](http://cranlogs.r-pkg.org/badges/dotwhisker?color=orange) [![Travis-CI Build Status](https://travis-ci.org/fsolt/dotwhisker.svg?branch=master)](https://travis-ci.org/fsolt/dotwhisker)
 
 `dotwhisker` is an R package for quickly and easily generating dot-and-whisker plots of regression results, either directly from model objects or from tidy data frames. It provides a convenient way to create highly customizable plots for presenting and comparing statistics. It can be used to plot coefficients or other estimates (e.g., predicted probabilities) within a model or compare them across different models. The estimates are presented as dots with confidence interval whiskers.
 
