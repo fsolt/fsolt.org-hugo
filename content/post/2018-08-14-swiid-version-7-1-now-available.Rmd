@@ -22,7 +22,7 @@ Version 7.1 of the SWIID is [now available](http://fsolt.org/swiid/swiid_downloa
 
 - includes estimates of market and disposable income inequality for 80 more country-years than version 6.2.
 
-```{r swiid_v70, echo=FALSE, message=FALSE, warning=FALSE}
+```{r swiid_v71, echo=FALSE, message=FALSE, warning=FALSE}
 library(tidyverse)
 load("../../../swiid/data/swiid7_1.rda")
 
