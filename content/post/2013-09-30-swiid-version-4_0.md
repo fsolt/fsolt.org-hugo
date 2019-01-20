@@ -1,9 +1,11 @@
 ---
+date: "2013-09-30 14:04:01"
 layout: post
-title:  "SWIID Version 4.0 is available!"
-date:   2013-09-30 14:04:01
-tags: [ "update", "swiid" ]
 slug: swiid-version-4_0
+tags:
+- update
+- swiid
+title: SWIID Version 4.0 is available!
 ---
 
 Version 4.0 of the SWIID is now available [here](../swiid/swiid_downloads.html).  Drawing on nearly 14,000 Gini observations in more than 3100 country-years, this version provides even better estimates of income inequality in countries around the world than in previous versions.

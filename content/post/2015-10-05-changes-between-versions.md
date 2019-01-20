@@ -1,9 +1,11 @@
 ---
+date: "2015-10-05 10:53:01"
 layout: post
-title:  "The estimates for Ruritania, among others, have changed since the previous version. Why is that?"
-date:   2015-10-05 10:53:01
-tags: [ "sfaq_data" ]
 slug: changes-between-versions
+tags:
+- sfaq_data
+title: The estimates for Ruritania, among others, have changed since the previous
+  version. Why is that?
 ---
 
 There are three reasons why estimates change from one version of the SWIID to the next. The first reason is revisions to the [Luxembourg Income Study](http://www.lisdatacenter.org/our-data/lis-database/documentation/data-revisions-notes/).  As the LIS serves as the standard for SWIID estimates, when Ginis from the LIS change, the SWIID estimates change as well.

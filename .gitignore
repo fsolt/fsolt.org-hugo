@@ -4,3 +4,4 @@
 .Ruserdata
 dev/*
 content/post/*.html
+.DS_Store

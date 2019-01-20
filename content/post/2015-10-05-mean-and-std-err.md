@@ -1,9 +1,10 @@
 ---
+date: "2015-10-05 17:14:01"
 layout: post
-title:  "How can I use the SWIID data to make my own graphs?"
-date:   2015-10-05 17:14:01
-tags: [ "sfaq_howto" ]
 slug: mean-and-std-err
+tags:
+- sfaq_howto
+title: How can I use the SWIID data to make my own graphs?
 ---
 
 The [SWIID download](https://dataverse.harvard.edu/dataset.xhtml?persistentId=hdl:1902.1/11992) contains files pre-formatted for use with the tools for analyzing multiply-imputed data and other data measured with uncertainty in Stata (`swiid6_0.dta`) or R (`swiid6_0`). This is meant to "set the default" in a way that encourages researchers to take into account the uncertainty in the SWIID estimates.  This uncertainty is considerable in many developing countries, and the tools available in both software packages can now handle pretty much any analysis one may desire (for details, read the documents `R_swiid.pdf` and `stata_swiid.pdf` in the SWIID download). But this format does not lend itself to graphing.  For this purpose, use the `swiid6_0_summary.csv` file, which presents the SWIID estimates in mean-plus-standard-error summary format.

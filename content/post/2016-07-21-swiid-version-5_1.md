@@ -1,9 +1,11 @@
 ---
+date: "2016-07-21 1:12:01"
 layout: post
-title:  "SWIID Version 5.1 is available!"
-date:   2016-07-21 1:12:01
-tags: [ "update", "swiid" ]
 slug: swiid-version-5_1
+tags:
+- update
+- swiid
+title: SWIID Version 5.1 is available!
 ---
 
 Version 5.1 of the SWIID is [now available](http://fsolt.org/swiid/swiid_downloads.html)!  It revises and updates the SWIID's source data and estimates.  It also includes expanded training modules explaining how to take into account the uncertainty in the estimates in both R and Stata.

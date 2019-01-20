@@ -1,9 +1,11 @@
 ---
+date: "2014-10-02 10:40:01"
 layout: post
-title:  "SWIID Version 5.0 is available!"
-date:   2014-10-02 10:40:01
-tags: [ "update", "swiid" ]
 slug: swiid-version-5_0
+tags:
+- update
+- swiid
+title: SWIID Version 5.0 is available!
 ---
 
 Version 5.0 of the SWIID is [now available](http://fsolt.org/swiid/swiid_downloads.html), and it is a major update.  A new article of record (currently available as a working paper while under peer review) reviews the problem of comparability in cross-national income inequality data, explains how the SWIID addresses the issue, assesses the SWIID's performance in comparison to the available alternatives, and explains how to use the SWIID data in cross-national analyses.

@@ -11,7 +11,7 @@ bibliography: /Users/fredsolt/Library/texmf/bibtex/bib/FSLibrary.bib
 csl: /Users/fredsolt/Library/texmf/bibtex/csl/american-political-science-association2.csl
 fig_height: 4 
 output:
-    html_page:
+    html_document:
         self_contained: true
 ---
 

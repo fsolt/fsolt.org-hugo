@@ -6,12 +6,12 @@ theme = "hugo-fs-theme"
 googleAnalytics = ""
 disqusShortname = ""
 ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
-uglyURLS = true
+uglyURLS = false
 enableEmoji = true
 blogdir = "blog"
 
 [permalinks]
-    post = "/blog/:year/:month/:day/:slug/"
+    post = "blog/:year/:month/:day/:slug/"
 
 [[menu.main]]
     name = "Home"
@@ -49,6 +49,8 @@ blogdir = "blog"
 [params]
     description = "Income Inequality & Its Consequences, Comparative Political Behavior, and Dynamic Comparative Public Opinion"
     subtitle = "Income Inequality & Its Consequences, Comparative Political Behavior, and Dynamic Comparative Public Opinion"
+    home_title = "About"
+    home_text = "I am an associate professor in the [Department of Political Science](http://clas.uiowa.edu/polisci/) at the [University of Iowa](http://www.uiowa.edu).  My interests include comparative political behavior and political economy from a cross-national perspective; I am also interested in computational methods for cross-national research.  Much of my work focuses on understanding how---and why---the extent of economic inequality in a country shapes the attitudes and behavior of the people who live there.  I also created and maintain the Standardized World Income Inequality Database (SWIID), which provides the most-comparable data available on income inequality for broadly cross-national research.  Please use the links at left to find out more about the SWIID, my research on the consequences of economic inequality, my work on other topics in comparative politics and political sociology, the courses I teach, my published software, blogged updates and working notes, and my CV."
 
     author = "Frederick Solt"
     dateFormat = "2006/01/02"
