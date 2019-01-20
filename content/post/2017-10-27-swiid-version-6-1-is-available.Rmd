@@ -15,7 +15,7 @@ output:
         self_contained: true
 ---
 
-Version 6.1 of the SWIID is [now available](http://fsolt.org/swiid/swiid_downloads.html)!  Building on the end-to-end revision accomplished in Version 6.0 last July, this new release:
+Version 6.1 of the SWIID is [now available](/swiid/swiid_downloads/)!  Building on the end-to-end revision accomplished in Version 6.0 last July, this new release:
 
 - incorporates in [its source data](https://github.com/fsolt/swiid/blob/master/data/swiid_source.csv) 280 new Ginis, including [newly available LIS data on Canada and Lithuania](http://www.lisdatacenter.org/news-and-events/fall-data-release/);
 
@@ -23,7 +23,7 @@ Version 6.1 of the SWIID is [now available](http://fsolt.org/swiid/swiid_downloa
 
 - expands estimates of market income inequality to _all_ country-years (version 6.0 only estimated market income inequality for countries included in the LIS, about a third of the total country-years);
 
-- calculates estimates of absolute and relative redistribution for twenty additional countries, for a total of sixty-six---all of the countries for which there is source data available [on both the distribution of market income and the distribution of disposable income or consumption](http://fsolt.org/blog/2015/10/05/redistribution-observations.html).
+- calculates estimates of absolute and relative redistribution for twenty additional countries, for a total of sixty-six---all of the countries for which there is source data available [on both the distribution of market income and the distribution of disposable income or consumption](/blog/2015/10/05/redistribution-observations/).
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 library(tidyverse)

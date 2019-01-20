@@ -15,7 +15,7 @@ output:
         self_contained: true
 ---
 
-Version 6.0 of the SWIID is [now available](http://fsolt.org/swiid/swiid_downloads.html)!  It represents a complete, starting from scratch, end-to-end revision, with all the heavy lifting [now done using #rstats and Stan](https://github.com/fsolt/swiid).
+Version 6.0 of the SWIID is [now available](/swiid/swiid_downloads/)!  It represents a complete, starting from scratch, end-to-end revision, with all the heavy lifting [now done using #rstats and Stan](https://github.com/fsolt/swiid/).
 
 ```{r, echo=FALSE, message=FALSE}
 library(tidyverse)
